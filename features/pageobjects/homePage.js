@@ -22,7 +22,7 @@ class HomePage{
         await this.menuButton.waitForDisplayed({ timeout: 5000 });
         await this.menuButton.click();
 
-        await this.logoutButton.waitForDisplayed({ timeout: 5000 });
+        // await this.logoutButton.waitForDisplayed({ timeout: 5000 });
         await this.logoutButton.click();
     }
     

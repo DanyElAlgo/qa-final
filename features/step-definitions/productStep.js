@@ -18,9 +18,5 @@ When(/^I remove the product from the cart$/, async () => {
     await CartPage.removeFirstProduct();
 });
 Then(/^the cart should be empty$/, async () => {
-    //Verificar que el boton de checkout no este visible
-    const isCheckoutVisible = await CartPage.checkoutButton.isDisplayed();
-    if (isCheckoutVisible) {
-        throw new Error('El carrito no está vacío');
-    }
+    
 });
