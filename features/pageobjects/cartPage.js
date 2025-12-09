@@ -1,13 +1,13 @@
 class CartPage{
-    get removeButton()  {return $('new UiSelector().description("test-REMOVE")')}
-    get checkoutButton(){return $('new UiSelector().description("test-CHECKOUT")')}
-    get firstNameInput(){return $('new UiSelector().text("First Name")')}
-    get lastNameInput() {return $('new UiSelector().text("Last Name")')}
-    get zipCodeInput()  {return $('new UiSelector().text("Zip/Postal Code")')}
-    get continueButton(){return $('new UiSelector().description("test-CONTINUE")')}
-    get finishButton()  {return $('new UiSelector().description("test-FINISH")')}
-    get successMessage(){return $('new UiSelector().text("THANK YOU FOR YOU ORDER")')}
-    get backHomeButton(){return $('new UiSelector().description("test-BACK HOME")')}
+    get removeButton()  {return $('android=new UiSelector().description("test-REMOVE")')}
+    get checkoutButton(){return $('android=new UiSelector().description("test-CHECKOUT")')}
+    get firstNameInput(){return $('android=new UiSelector().text("First Name")')}
+    get lastNameInput() {return $('android=new UiSelector().text("Last Name")')}
+    get zipCodeInput()  {return $('android=new UiSelector().text("Zip/Postal Code")')}
+    get continueButton(){return $('android=new UiSelector().description("test-CONTINUE")')}
+    get finishButton()  {return $('android=new UiSelector().description("test-FINISH")')}
+    get successMessage(){return $('android=new UiSelector().text("THANK YOU FOR YOU ORDER")')}
+    get backHomeButton(){return $('android=new UiSelector().description("test-BACK HOME")')}
 
     async removeFirstProduct(){
         await this.removeButton.waitForDisplayed({ timeout: 5000 });

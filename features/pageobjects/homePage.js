@@ -1,10 +1,10 @@
 class HomePage{
-    get addProduct1() { return $('new UiSelector().description("test-ADD TO CART").instance(0)');}
-    get addProduct2() { return $('new UiSelector().description("test-ADD TO CART").instance(1)');}
-    get removeProductSingle() { return $('new UiSelector().description("test-REMOVE")')} //VERY, VERY HARDCODED D:
-    get cartButton() { return $('new UiSelector().className("android.widget.ImageView").instance(3)')}
-    get menuButton() { return $('new UiSelector().className("android.widget.ImageView").instance(1)')}
-    get logoutButton() { return $('new UiSelector().description("test-LOGOUT")')}
+    get addProduct1()         { return $('android=new UiSelector().description("test-ADD TO CART").instance(0)');}
+    get addProduct2()         { return $('android=new UiSelector().description("test-ADD TO CART").instance(1)');}
+    get removeProductSingle() { return $('android=new UiSelector().description("test-REMOVE")')} //VERY, VERY HARDCODED D:
+    get cartButton()          { return $('android=new UiSelector().className("android.widget.ImageView").instance(3)')}
+    get menuButton()          { return $('android=new UiSelector().className("android.widget.ImageView").instance(1)')}
+    get logoutButton()        { return $('android=new UiSelector().description("test-LOGOUT")')}
 
     async addFirstProduct(){
         await this.addProduct1.waitForDisplayed({ timeout: 5000 });

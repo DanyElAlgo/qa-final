@@ -10,8 +10,7 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
     await LoginPage.login(username, password)
 });
 
-Then(/^I should see products to buy$/, async () => {
-    //esperar unos segundos
-    await browser.pause(2000);
-    await HomePage.addProduct1.waitForDisplayed({ timeout: 5000 });
+Then(/^I log out$/, async () => {
+    await HomePage.logout();
 });
+

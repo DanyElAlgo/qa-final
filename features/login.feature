@@ -4,7 +4,7 @@ Feature: Login into the page
 
     Given I am on the login page
     When I login with <username> and <password>
-    Then I should see products to buy
+    Then I log out
 
     Examples:
       | username      | password        |

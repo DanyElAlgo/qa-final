@@ -3,15 +3,8 @@ import LoginPage from '../pageobjects/loginPage.js'
 import HomePage from '../pageobjects/homePage.js'
 import CartPage from '../pageobjects/cartPage.js'
 
-Given(/^I am on the login page$/, async () => {});
-
-When(/^I login with "([^"]+)" and "([^"]+)"$/, async (username, password) => {
+When(/^I login as "([^"]+)" and "([^"]+)"$/, async (username, password) => {
     await LoginPage.login(username, password)
-});
-Then(/^I should see products to buy$/, async () => {
-    //esperar unos segundos
-    await browser.pause(2000);
-    await HomePage.addProduct1.waitForDisplayed({ timeout: 5000 });
 });
 
 When(/^I add the first product to the cart$/, async () => {
