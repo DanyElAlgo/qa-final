@@ -14,6 +14,7 @@ class CartPage{
         await this.removeButton.click();
     }
     async checkout(firstName, lastName, zipCode){
+        await this.checkoutButton.scrollIntoView();
         await this.checkoutButton.waitForDisplayed({ timeout: 5000 });
         await this.checkoutButton.click();
 
@@ -23,9 +24,11 @@ class CartPage{
         await this.lastNameInput.setValue(lastName);
         await this.zipCodeInput.waitForDisplayed({ timeout: 5000 });
         await this.zipCodeInput.setValue(zipCode);
+        await this.continueButton.scrollIntoView();
         await this.continueButton.waitForDisplayed({ timeout: 5000 });
         await this.continueButton.click();
 
+        await this.finishButton.scrollIntoView();
         await this.finishButton.waitForDisplayed({ timeout: 5000 });
         await this.finishButton.click();
 
