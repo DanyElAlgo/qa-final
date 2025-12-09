@@ -1,13 +1,13 @@
 class CartPage{
-    get removeButton()  {}
-    get checkoutButton(){}
-    get firstNameInput(){}
-    get lastNameInput() {}
-    get zipCodeInput()  {}
-    get continueButton(){}
-    get finishButton()  {}
-    get successMessage(){}
-    get backHomeButton(){}
+    get removeButton()  {return $('new UiSelector().description("test-REMOVE")')}
+    get checkoutButton(){return $('new UiSelector().description("test-CHECKOUT")')}
+    get firstNameInput(){return $('new UiSelector().text("First Name")')}
+    get lastNameInput() {return $('new UiSelector().text("Last Name")')}
+    get zipCodeInput()  {return $('new UiSelector().text("Zip/Postal Code")')}
+    get continueButton(){return $('new UiSelector().description("test-CONTINUE")')}
+    get finishButton()  {return $('new UiSelector().description("test-FINISH")')}
+    get successMessage(){return $('new UiSelector().text("THANK YOU FOR YOU ORDER")')}
+    get backHomeButton(){return $('new UiSelector().description("test-BACK HOME")')}
 
     async removeFirstProduct(){
         await this.removeButton.waitForDisplayed({ timeout: 5000 });
