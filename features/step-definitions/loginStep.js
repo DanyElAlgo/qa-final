@@ -11,6 +11,8 @@ When(/^I login with (\w+) and (.+)$/, async (username, password) => {
 });
 
 Then(/^I log out$/, async () => {
+    //esperar 2 segundos
+    await new Promise(resolve => setTimeout(resolve, 2000));
     await HomePage.logout();
 });
 
