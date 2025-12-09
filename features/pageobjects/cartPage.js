@@ -1,13 +1,13 @@
 class CartPage{
-    get removeButton() {}
-    get checkoutButton() {}
-    get firstNameInput() {}
+    get removeButton()  {}
+    get checkoutButton(){}
+    get firstNameInput(){}
     get lastNameInput() {}
-    get zipCodeInput() {}
-    get continueButton() {}
-    get finishButton() {}
-    get successMessage() {}
-    get backHomeButton() {}
+    get zipCodeInput()  {}
+    get continueButton(){}
+    get finishButton()  {}
+    get successMessage(){}
+    get backHomeButton(){}
 
     async removeFirstProduct(){
         await this.removeButton.waitForDisplayed({ timeout: 5000 });
